@@ -1,0 +1,3 @@
+Create a data schema and API interactions for a recipe sharing platform using Amplify Gen 2. 
+Include models for users, recipes, ingredients, and ratings. 
+Demonstrate how to fetch recipes
