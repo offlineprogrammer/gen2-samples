@@ -1,0 +1,1 @@
+"Create a data model and API usage example for a social media app using AWS Amplify Gen 2. Include models for users, posts, and comments, with relationships between them. Show how to create a post and fetch a user's posts."
