@@ -1,0 +1,3 @@
+"Design a data schema and provide API usage examples for an e-commerce app using Amplify Gen 2. 
+Include models for products, categories, orders, and users. 
+Demonstrate how to fetch products"
