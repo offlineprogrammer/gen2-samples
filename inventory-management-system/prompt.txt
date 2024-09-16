@@ -1,0 +1,3 @@
+Develop a data model and API interactions for an inventory management system using Amplify Gen 2. 
+Include models for products, categories, suppliers, orders, and order items. 
+Show how to get the list of products.
