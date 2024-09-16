@@ -1,0 +1,3 @@
+Design a data schema and API usage examples for a collaborative project management tool using Amplify Gen 2. 
+Include models for users, projects, tasks, and comments. 
+Demonstrate how to fetch projects list.
