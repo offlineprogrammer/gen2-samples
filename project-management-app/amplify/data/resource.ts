@@ -10,9 +10,7 @@ const schema = a.schema({
       comments: a.hasMany("Comment", "userId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
 
@@ -24,9 +22,7 @@ const schema = a.schema({
       user: a.belongsTo("User", "userId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
 
@@ -41,9 +37,7 @@ const schema = a.schema({
       tasks: a.hasMany("Task", "projectId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
   Task: a
@@ -60,9 +54,7 @@ const schema = a.schema({
       comments: a.hasMany("Comment", "taskId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
   Comment: a
@@ -75,9 +67,7 @@ const schema = a.schema({
       createdAt: a.date().required(),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
 });

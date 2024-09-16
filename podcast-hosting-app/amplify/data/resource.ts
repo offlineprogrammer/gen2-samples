@@ -10,9 +10,7 @@ const schema = a.schema({
       subscriptions: a.hasMany("Subscription", "subscriptionId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
 
@@ -27,9 +25,7 @@ const schema = a.schema({
       podcast: a.belongsTo("Podcast", "podcastId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
 
@@ -41,9 +37,7 @@ const schema = a.schema({
       podcast: a.belongsTo("Podcast", "podcastId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
 
@@ -54,9 +48,7 @@ const schema = a.schema({
       subscriptions: a.hasMany("Subscription", "userId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
 });

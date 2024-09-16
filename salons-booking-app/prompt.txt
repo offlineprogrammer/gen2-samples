@@ -1,0 +1,3 @@
+Create a data schema and API interactions for an online booking system for salons using Amplify Gen 2. 
+Include models for salons, stylists, services, customers, and appointments. 
+Demonstrate how to fetch a list of salons

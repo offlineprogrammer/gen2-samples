@@ -8,9 +8,7 @@ const schema = a.schema({
       albums: a.hasMany("Album", "artistId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
   Album: a
@@ -22,9 +20,7 @@ const schema = a.schema({
       tracks: a.hasMany("Track", "albumId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
   Track: a
@@ -36,9 +32,7 @@ const schema = a.schema({
       playlists: a.hasMany("PlaylistTrack", "trackId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
   User: a
@@ -55,9 +49,7 @@ const schema = a.schema({
       tracks: a.hasMany("PlaylistTrack", "playlistId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
   PlaylistTrack: a
@@ -68,9 +60,7 @@ const schema = a.schema({
       track: a.belongsTo("Track", "trackId"),
     })
     .authorization((allow) => [
-      // Allow public to read instructors
       allow.publicApiKey().to(["read"]),
-      // Allow owner to create, update, delete Instructors
       allow.owner(),
     ]),
 });
