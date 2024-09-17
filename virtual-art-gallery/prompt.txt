@@ -1,0 +1,3 @@
+Design a data schema and API usage for a virtual art gallery using Amplify Gen 2. 
+Include models for artists, artworks, exhibitions, and visitors. 
+Demonstrate how to fetch a list of artists
