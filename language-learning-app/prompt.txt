@@ -1,0 +1,3 @@
+Create a backend schema for a language learning app using Amplify Gen 2. 
+Include models for languages, courses, lessons, exercises, users, and progress tracking. 
+Demonstrate how to fetch the list of courses
