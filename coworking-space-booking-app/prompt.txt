@@ -1,0 +1,3 @@
+Design a backend schema for a coworking space booking system using Amplify Gen 2. 
+Include models for users, spaces, bookings, and amenities. 
+demonstrate how to get a list of spaces
