@@ -1,0 +1,3 @@
+Create a backend data schema for a property rental platform like Airbnb using Amplify Gen 2. 
+Include models for properties, users (both owners and guests), bookings, and reviews. 
+Demonstrate how get a list of properties.
