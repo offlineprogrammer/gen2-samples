@@ -1,0 +1,3 @@
+Design a backend schema for a real-time multiplayer game using AWS Amplify Gen 2. 
+Include models for users, games, and moves. 
+Show how to fetch a list of games.
