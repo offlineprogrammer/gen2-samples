@@ -1,3 +1,4 @@
 Design a backend schema for a coworking space booking system using Amplify Gen 2. 
 Include models for users, spaces, bookings, and amenities. 
 demonstrate how to get a list of spaces
+Share the backend code for authentication using Amplify Gen 2 to allow the user's to sign up using their apple social login
