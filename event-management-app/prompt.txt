@@ -1,3 +1,4 @@
 "Develop a data model and API usage for an event management application using Amplify Gen 2. 
 Include models for users, events, and tickets. 
-Show how to fetch a list of events."
+Show how to fetch a list of events.
+Share the backend code for authentication using Amplify Gen 2 to allow the user's to sign up using their amazon account
