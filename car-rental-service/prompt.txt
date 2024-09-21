@@ -1,3 +1,4 @@
 Develop a data schema and API usage examples for a car rental service using Amplify Gen 2. 
 Include models for vehicles, customers, rentals, and locations. 
 Demonstrate how to fetch a list of vehicles
+Share the backend code for authentication using Amplify Gen 2 to allow the user's to sign up using their google email
