@@ -1,3 +1,4 @@
 Design a backend schema for a real-time multiplayer game using AWS Amplify Gen 2. 
 Include models for users, games, and moves. 
 Show how to fetch a list of games.
+Share the backend code for authentication using Amplify Gen 2 to allow the uses to sign up using their email address
