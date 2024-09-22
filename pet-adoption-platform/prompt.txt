@@ -1,3 +1,4 @@
 Create a data model and API interactions for a pet adoption platform using Amplify Gen 2. 
 Include models for shelters, pets, adopters, and adoption applications. 
 Show how to get a list of pets
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to pet adoption
