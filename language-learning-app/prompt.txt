@@ -1,3 +1,4 @@
 Create a backend schema for a language learning app using Amplify Gen 2. 
 Include models for languages, courses, lessons, exercises, users, and progress tracking. 
 Demonstrate how to fetch the list of courses
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to language learning
