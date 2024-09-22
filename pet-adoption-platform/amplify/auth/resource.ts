@@ -3,8 +3,11 @@ import { defineAuth, secret } from "@aws-amplify/backend";
 export const auth = defineAuth({
   loginWith: {
     email: {
-      verificationEmailSubject: "Verify your email for PetPal Adoption",
-      verificationEmailBody: "Welcome to PetPal! Your verification code is {####}",
+      verificationEmailStyle: "CODE",
+      verificationEmailSubject: "Verify your email for PetPal",
+      verificationEmailBody: (createCode) =>
+        `Welcome to PetPal! Your verification code is: ${createCode()}`,
+
     },
     phone: true,
     externalProviders: {

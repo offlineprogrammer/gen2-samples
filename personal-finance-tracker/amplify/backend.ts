@@ -3,9 +3,11 @@ import { defineAuth, secret } from "@aws-amplify/backend";
 export const auth = defineAuth({
   loginWith: {
     email: {
+      verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for FinTrack",
-      verificationEmailBody:
-        "Welcome to FinTrack! Your verification code is {####}",
+      verificationEmailBody: (createCode) =>
+        `Welcome to FinTrack! Your verification code is: ${createCode()}`,
+
     },
     externalProviders: {
       google: {
