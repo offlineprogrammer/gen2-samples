@@ -12,11 +12,11 @@ export const auth = defineAuth({
         clientId: secret('GOOGLE_CLIENT_ID'),
         clientSecret: secret('GOOGLE_CLIENT_SECRET'),
       },
-      apple: {
-        clientId: secret('APPLE_CLIENT_ID'),
-        teamId: secret('APPLE_TEAM_ID'),
-        keyId: secret('APPLE_KEY_ID'),
-        privateKey: secret('APPLE_PRIVATE_KEY'),
+      signInWithApple: {
+        clientId: secret('SIWA_CLIENT_ID'),
+        keyId: secret('SIWA_KEY_ID'),
+        privateKey: secret('SIWA_PRIVATE_KEY'),
+        teamId: secret('SIWA_TEAM_ID')
       },
       facebook: {
         clientId: secret('FACEBOOK_CLIENT_ID'),
@@ -25,22 +25,17 @@ export const auth = defineAuth({
     },
   },
   userAttributes: {
-    preferredLanguage: {
+    "custom:preferredLanguage": {
+      dataType: "String",
       required: true,
       mutable: true,
     },
-    nativeLanguage: {
+    "custom:nativeLanguage": {
+      dataType: "String",
       required: true,
       mutable: true,
     },
-    proficiencyLevel: {
-      required: false,
-      mutable: true,
-    },
-    learningGoals: {
-      required: false,
-      mutable: true,
-    },
+
   },
   multifactor: {
     mode: 'OPTIONAL',

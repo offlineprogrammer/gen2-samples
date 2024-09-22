@@ -1,3 +1,4 @@
 Develop a data schema and API usage examples for an online learning app using Amplify Gen 2. 
 Include models for instructors, students, courses, lessons, and enrollments. 
 Demonstrate how to fetch a list of courses
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to online learning

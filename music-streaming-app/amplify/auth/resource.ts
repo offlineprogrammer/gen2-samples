@@ -12,43 +12,35 @@ export const auth = defineAuth({
         clientId: secret('GOOGLE_CLIENT_ID'),
         clientSecret: secret('GOOGLE_CLIENT_SECRET'),
       },
-      apple: {
-        clientId: secret('APPLE_CLIENT_ID'),
-        teamId: secret('APPLE_TEAM_ID'),
-        keyId: secret('APPLE_KEY_ID'),
-        privateKey: secret('APPLE_PRIVATE_KEY'),
+      signInWithApple: {
+        clientId: secret('SIWA_CLIENT_ID'),
+        keyId: secret('SIWA_KEY_ID'),
+        privateKey: secret('SIWA_PRIVATE_KEY'),
+        teamId: secret('SIWA_TEAM_ID')
       },
       facebook: {
         clientId: secret('FACEBOOK_CLIENT_ID'),
         clientSecret: secret('FACEBOOK_CLIENT_SECRET'),
       },
-      spotify: {
-        clientId: secret('SPOTIFY_CLIENT_ID'),
-        clientSecret: secret('SPOTIFY_CLIENT_SECRET'),
-      },
     },
   },
   userAttributes: {
-    preferredGenres: {
+    "custom:preferredGenres": {
+      dataType: "String",
       required: false,
       mutable: true,
     },
-    favoriteArtists: {
+    "custom:favoriteArtists": {
+      dataType: "String",
       required: false,
       mutable: true,
     },
-    subscriptionTier: {
-      required: true,
+
+    birthdate: {
       mutable: true,
-    },
-    dateOfBirth: {
-      required: true,
-      mutable: false,
-    },
-    country: {
-      required: true,
-      mutable: true,
-    },
+      required: false,
+    }
+
   },
   multifactor: {
     mode: 'OPTIONAL',
@@ -64,7 +56,7 @@ export const auth = defineAuth({
   signUpAttributes: [
     'email',
     'name',
-    'dateOfBirth',
+    'birthdate',
     'country',
     'subscriptionTier',
   ],
