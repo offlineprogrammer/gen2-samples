@@ -1,3 +1,4 @@
 Design a data schema and API usage examples for a collaborative project management tool using Amplify Gen 2. 
 Include models for users, projects, tasks, and comments. 
 Demonstrate how to fetch projects list.
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to project management
