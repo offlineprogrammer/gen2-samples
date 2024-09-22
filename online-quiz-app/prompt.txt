@@ -1,3 +1,4 @@
 Create a data schema and API interactions for an online quiz platform using Amplify Gen 2. 
 Include models for quizzes, questions, users, and quiz attempts. 
 Demonstrate how to fetch the list of quizzes
+Create backend code for authentication using Amplify Gen 2 that supports multiple social sign-in methods 
