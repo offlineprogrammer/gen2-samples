@@ -1,3 +1,4 @@
 Develop a data model and API usage examples for a freelance marketplace using Amplify Gen 2. 
 Include models for freelancers, clients, projects, bids, and reviews. 
 Show how to fetch a list of projects
+Share the backend code for authentication using Amplify Gen 2 to allow the user's to sign up using their phone number
