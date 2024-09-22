@@ -1,11 +1,54 @@
-import { defineBackend } from '@aws-amplify/backend';
-import { auth } from './auth/resource';
-import { data } from './data/resource';
+import { defineAuth, secret } from "@aws-amplify/backend";
 
-/**
- * @see https://docs.amplify.aws/react/build-a-backend/ to add storage, functions, and more
- */
-defineBackend({
-  auth,
-  data,
+export const auth = defineAuth({
+  loginWith: {
+    email: {
+      verificationEmailSubject: "Verify your email for FinTrack",
+      verificationEmailBody:
+        "Welcome to FinTrack! Your verification code is {####}",
+    },
+    externalProviders: {
+      google: {
+        clientId: secret("GOOGLE_CLIENT_ID"),
+        clientSecret: secret("GOOGLE_CLIENT_SECRET"),
+      },
+      signInWithApple: {
+        clientId: secret("SIWA_CLIENT_ID"),
+        keyId: secret("SIWA_KEY_ID"),
+        privateKey: secret("SIWA_PRIVATE_KEY"),
+        teamId: secret("SIWA_TEAM_ID"),
+      },
+    },
+  },
+  userAttributes: {
+    "custom:currency": {
+      dataType: "String",
+      required: true,
+      mutable: true,
+    },
+    "custom:monthlyBudget": {
+      dataType: "Number",
+      required: false,
+      mutable: true,
+    },
+  },
+  multifactor: {
+    mode: "REQUIRED",
+    sms: true,
+    totp: true,
+  },
+  passwordPolicy: {
+    minLength: 12,
+    requireNumbers: true,
+    requireSpecialCharacters: true,
+    requireUppercase: true,
+    requireLowercase: true,
+  },
+  signUpAttributes: ["email", "currency"],
+  verificationMechanisms: ["email"],
+  callbackUrls: [
+    "http://localhost:3000/auth",
+    "https://yourfinanceapp.com/auth",
+  ],
+  logoutUrls: ["http://localhost:3000/", "https://yourfinanceapp.com/"],
 });

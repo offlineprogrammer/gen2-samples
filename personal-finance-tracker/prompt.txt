@@ -1,3 +1,4 @@
 Design a data model and API interactions for a personal finance tracking application using Amplify Gen 2. 
 Include models for users, accounts, transactions, and budgets. 
 Show how to get a list of accounts.
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to financial tracking, and ensures high security due to the sensitive nature of financial data
