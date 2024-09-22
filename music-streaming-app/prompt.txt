@@ -1,3 +1,4 @@
 Create a data schema and API usage for a music streaming service using Amplify Gen 2. 
 Include models for artists, albums, tracks, users, and playlists. 
 Demonstrate how to get a list of artists
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to music preferences
