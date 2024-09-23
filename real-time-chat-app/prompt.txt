@@ -1,3 +1,4 @@
 Design a data model and API usage examples for a real-time chat application using AWS Amplify Gen 2. 
 Include models for users, conversations, and messages. 
 Show how to get the conversations.
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to a chat application
