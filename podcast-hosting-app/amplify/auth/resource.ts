@@ -11,43 +11,15 @@ export const auth = defineAuth({
     phone: true,
   },
   userAttributes: {
-    name: {
-      required: true,
-      mutable: false,
-    },
-   
-    picture: {
+    profilePicture: {
       required: false,
       mutable: true,
     },
-
   },
- 
+
   multifactor: {
-    mode: 'OPTIONAL',
+    mode: "OPTIONAL",
     sms: true,
     totp: true,
   },
-  passwordPolicy: {
-    minLength: 10,
-    requireNumbers: true,
-    requireSpecialCharacters: true,
-    requireUppercase: true,
-    requireLowercase: true,
-  },
-  signUpAttributes: [
-    'email',
-    'name',
-    'picture',
-  ],
-  
-  verificationMechanisms: ['email'],
-  callbackUrls: [
-    'http://localhost:3000/auth',
-    'https://yourpodcastapp.com/auth'
-  ],
-  logoutUrls: [
-    'http://localhost:3000/',
-    'https://yourpodcastapp.com/'
-  ],
 });

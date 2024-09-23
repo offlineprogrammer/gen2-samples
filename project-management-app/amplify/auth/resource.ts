@@ -10,13 +10,8 @@ export const auth = defineAuth({
     },
   },
   userAttributes: {
-    name: {
-      required: true,
-      mutable: true,
-    },
     "custom:jobTitle": {
       dataType: "String",
-      required: false,
       mutable: true,
     },
   },
@@ -26,18 +21,5 @@ export const auth = defineAuth({
     sms: true,
     totp: true,
   },
-  passwordPolicy: {
-    minLength: 12,
-    requireNumbers: true,
-    requireSpecialCharacters: true,
-    requireUppercase: true,
-    requireLowercase: true,
-  },
-  signUpAttributes: ["email", "name", "jobTitle"],
-  verificationMechanisms: ["email"],
-  callbackUrls: [
-    "http://localhost:3000/auth",
-    "https://yourprojectapp.com/auth",
-  ],
-  logoutUrls: ["http://localhost:3000/", "https://yourprojectapp.com/"],
+
 });

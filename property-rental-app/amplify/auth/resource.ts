@@ -1,11 +1,24 @@
-import { defineAuth } from '@aws-amplify/backend';
+import { defineAuth, secret } from "@aws-amplify/backend";
 
-/**
- * Define and configure your auth resource
- * @see https://docs.amplify.aws/gen2/build-a-backend/auth
- */
 export const auth = defineAuth({
   loginWith: {
-    email: true,
+    email: {
+      verificationEmailStyle: "CODE",
+      verificationEmailSubject: "Verify your email for RentalPro",
+      verificationEmailBody: (createCode) =>
+        `Welcome to RentalPro! Your verification code is: ${createCode()}`,
+    },
+  },
+  userAttributes: {
+    "custom:role": {
+      dataType: "String",
+      mutable: true,
+    },
+  },
+  groups: ["Landlords", "Tenants", "Administrators"],
+  multifactor: {
+    mode: "OPTIONAL",
+    sms: true,
+    totp: true,
   },
 });
