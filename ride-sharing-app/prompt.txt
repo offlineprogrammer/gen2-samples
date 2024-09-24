@@ -1,3 +1,4 @@
 Design a data model for a ride-sharing application using AWS Amplify Gen 2. 
 Include entities for users (both drivers and passengers), and rides. 
 demonstrate how to get the list of drivers
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to ride-sharing
