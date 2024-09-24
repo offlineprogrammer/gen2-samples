@@ -1,3 +1,4 @@
 "Develop a data model and API interactions for a task management application using Amplify Gen 2. 
 Include models for users, tasks, and projects. 
-Show how to fetch a list of projects."
+Show how to fetch a list of projects.
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to task management and team organization.
