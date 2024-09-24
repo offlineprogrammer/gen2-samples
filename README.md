@@ -1,0 +1,1 @@
+This repository contains a collection of sample projects for demonstrating various features and best practices of [Amplify Gen 2](https://docs.amplify.aws/). 
