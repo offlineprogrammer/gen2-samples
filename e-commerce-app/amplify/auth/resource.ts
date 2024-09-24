@@ -5,8 +5,12 @@ export const auth = defineAuth({
     email: true,
     externalProviders: {
       facebook: {
-        clientId: secret('FACEBOOK_CLIENT_ID'),
-        clientSecret: secret('FACEBOOK_CLIENT_SECRET')
+        clientId: secret("FACEBOOK_CLIENT_ID"),
+        clientSecret: secret("FACEBOOK_CLIENT_SECRET"),
+      },
+      loginWithAmazon: {
+        clientId: secret('LOGINWITHAMAZON_CLIENT_ID'),
+        clientSecret: secret('LOGINWITHAMAZON_CLIENT_SECRET')
       },
       callbackUrls: [
         "http://localhost:3000/auth",
