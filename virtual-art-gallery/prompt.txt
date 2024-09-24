@@ -1,3 +1,4 @@
 Design a data schema and API usage for a virtual art gallery using Amplify Gen 2. 
 Include models for artists, artworks, exhibitions, and visitors. 
 Demonstrate how to fetch a list of artists
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user attributes relevant to art gallery interactions.
