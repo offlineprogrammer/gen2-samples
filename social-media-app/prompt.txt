@@ -1,3 +1,4 @@
 "Create a data model and API usage example for a social media app using AWS Amplify Gen 2. 
 Include models for users, posts, and comments, with relationships between them. 
-Show how to get a list of posts."
+Show how to get a list of posts.
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to social media profiles.
