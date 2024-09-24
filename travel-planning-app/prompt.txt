@@ -1,3 +1,4 @@
 Design a data schema and API usage for a travel planning application using Amplify Gen 2. 
 Include models for users, trips, and activities. 
 Demonstrate how to get a list of trips.
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to travel planning.
