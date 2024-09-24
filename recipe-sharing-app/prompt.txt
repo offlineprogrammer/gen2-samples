@@ -1,3 +1,4 @@
 Create a data schema and API interactions for a recipe sharing platform using Amplify Gen 2. 
 Include models for users, recipes, ingredients, and ratings. 
 Demonstrate how to fetch recipes
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to recipe sharing
