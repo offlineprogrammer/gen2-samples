@@ -24,17 +24,23 @@ export const auth = defineAuth({
         clientId: secret('FACEBOOK_CLIENT_ID'),
         clientSecret: secret('FACEBOOK_CLIENT_SECRET'),
       },
+      callbackUrls: [
+        'http://localhost:3000/auth',
+        'https://yourlanguageapp.com/auth'
+      ],
+      logoutUrls: [
+        'http://localhost:3000/',
+        'https://yourlanguageapp.com/'
+      ],
     },
   },
   userAttributes: {
     "custom:preferredLanguage": {
       dataType: "String",
-      required: true,
       mutable: true,
     },
     "custom:nativeLanguage": {
       dataType: "String",
-      required: true,
       mutable: true,
     },
 
@@ -43,25 +49,6 @@ export const auth = defineAuth({
     mode: 'OPTIONAL',
     sms: true,
   },
-  passwordPolicy: {
-    minLength: 8,
-    requireNumbers: true,
-    requireSpecialCharacters: true,
-    requireUppercase: true,
-    requireLowercase: true,
-  },
-  signUpAttributes: [
-    'email',
-    'name',
-    'preferredLanguage',
-    'nativeLanguage',
-  ],
-  callbackUrls: [
-    'http://localhost:3000/auth',
-    'https://yourlanguageapp.com/auth'
-  ],
-  logoutUrls: [
-    'http://localhost:3000/',
-    'https://yourlanguageapp.com/'
-  ],
+
+
 });

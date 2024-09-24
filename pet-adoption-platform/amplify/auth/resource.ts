@@ -7,22 +7,26 @@ export const auth = defineAuth({
       verificationEmailSubject: "Verify your email for PetPal",
       verificationEmailBody: (createCode) =>
         `Welcome to PetPal! Your verification code is: ${createCode()}`,
-
     },
     phone: true,
     externalProviders: {
       google: {
-        clientId: secret('GOOGLE_CLIENT_ID'),
-        clientSecret: secret('GOOGLE_CLIENT_SECRET'),
+        clientId: secret("GOOGLE_CLIENT_ID"),
+        clientSecret: secret("GOOGLE_CLIENT_SECRET"),
       },
       facebook: {
-        clientId: secret('FACEBOOK_CLIENT_ID'),
-        clientSecret: secret('FACEBOOK_CLIENT_SECRET'),
+        clientId: secret("FACEBOOK_CLIENT_ID"),
+        clientSecret: secret("FACEBOOK_CLIENT_SECRET"),
       },
+      callbackUrls: [
+        "http://localhost:3000/auth",
+        "https://yourpetadoptionapp.com/auth",
+      ],
+      logoutUrls: ["http://localhost:3000/", "https://yourpetadoptionapp.com/"],
     },
   },
   userAttributes: {
-    name: {
+    preferredUsername: {
       required: true,
       mutable: false,
     },
@@ -31,34 +35,13 @@ export const auth = defineAuth({
       mutable: true,
     },
     "custom:preferredPetTypes": {
-      required: false,
+      dataType: "String",
       mutable: true,
     },
-
   },
- 
+
   multifactor: {
-    mode: 'OPTIONAL',
+    mode: "OPTIONAL",
     sms: true,
   },
-  passwordPolicy: {
-    minLength: 10,
-    requireNumbers: true,
-    requireSpecialCharacters: true,
-    requireUppercase: true,
-    requireLowercase: true,
-  },
-  signUpAttributes: [
-    'email',
-    'name',
-  ],
-  verificationMechanisms: ['email'],
-  callbackUrls: [
-    'http://localhost:3000/auth',
-    'https://yourpetadoptionapp.com/auth'
-  ],
-  logoutUrls: [
-    'http://localhost:3000/',
-    'https://yourpetadoptionapp.com/'
-  ],
 });
