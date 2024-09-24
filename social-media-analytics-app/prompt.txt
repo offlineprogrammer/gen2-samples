@@ -1,3 +1,4 @@
 Create a data model for a social media analytics dashboard using AWS Amplify Gen 2. 
 Include entities for users, social media accounts, posts, analytics data, and campaigns. 
 Show how to get a list of campaigns.
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to social media analytics and management.
