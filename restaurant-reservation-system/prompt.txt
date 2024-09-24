@@ -1,3 +1,4 @@
 Develop a data model for a restaurant reservation system using AWS Amplify Gen 2. 
 Include entities for restaurants, tables, menu items, users, reservations, and reviews. 
 Show how to fetch a list of restaurants
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to restaurant reservations
