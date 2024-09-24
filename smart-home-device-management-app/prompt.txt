@@ -1,3 +1,4 @@
 Create a backend data schema for a smart home device management system using Amplify Gen 2. 
 Include models for users, homes, rooms, devices, device readings, and automations. 
 Demonstrate how to get the list of devices
+Create backend code for authentication using Amplify Gen 2 that supports multiple sign-in methods and potentially includes user profile information relevant to managing smart home devices and access levels.
