@@ -19,8 +19,8 @@ export const auth = defineAuth({
         clientSecret: secret("FACEBOOK_CLIENT_SECRET"),
       },
       callbackUrls: [
-        "http://localhost:3000/auth",
-        "https://yoursalonapp.com/auth",
+        "http://localhost:3000/",
+        "https://yoursalonapp.com/",
       ],
       logoutUrls: ["http://localhost:3000/", "https://yoursalonapp.com/"],
     },

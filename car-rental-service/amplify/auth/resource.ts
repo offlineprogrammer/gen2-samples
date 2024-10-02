@@ -10,8 +10,8 @@ export const auth = defineAuth({
       },
 
       callbackUrls: [
-        "http://localhost:3000/auth",
-        "https://yourdomain.com/auth",
+        "http://localhost:3000/",
+        "https://yourdomain.com/",
       ],
       logoutUrls: ["http://localhost:3000/", "https://yourdomain.com/"],
     },

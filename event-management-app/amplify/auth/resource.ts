@@ -18,8 +18,8 @@ export const auth = defineAuth({
         teamId: secret("SIWA_TEAM_ID"),
       },
       callbackUrls: [
-        "http://localhost:3000/auth",
-        "https://youreventapp.com/auth",
+        "http://localhost:3000/",
+        "https://youreventapp.com/",
       ],
       logoutUrls: ["http://localhost:3000/", "https://youreventapp.com/"],
     },

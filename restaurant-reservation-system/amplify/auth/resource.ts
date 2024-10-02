@@ -16,8 +16,8 @@ export const auth = defineAuth({
         clientSecret: secret("GOOGLE_CLIENT_SECRET"),
       },
       callbackUrls: [
-        "http://localhost:3000/auth",
-        "https://yourdineaseapp.com/auth",
+        "http://localhost:3000/",
+        "https://yourdineaseapp.com/",
       ],
       logoutUrls: ["http://localhost:3000/", "https://yourdineaseapp.com/"],
     },

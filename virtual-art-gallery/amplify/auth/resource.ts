@@ -29,8 +29,8 @@ export const auth = defineAuth({
         clientSecret: secret("FACEBOOK_CLIENT_SECRET"),
       },
       callbackUrls: [
-        "http://localhost:3000/auth",
-        "https://yourvirtualgallery.com/auth",
+        "http://localhost:3000/",
+        "https://yourvirtualgallery.com/",
       ],
       logoutUrls: ["http://localhost:3000/", "https://yourvirtualgallery.com/"],
     },

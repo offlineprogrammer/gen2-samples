@@ -19,8 +19,8 @@ export const auth = defineAuth({
         clientSecret: secret("FACEBOOK_CLIENT_SECRET"),
       },
       callbackUrls: [
-        "http://localhost:3000/auth",
-        "https://yourpetadoptionapp.com/auth",
+        "http://localhost:3000/",
+        "https://yourpetadoptionapp.com/",
       ],
       logoutUrls: ["http://localhost:3000/", "https://yourpetadoptionapp.com/"],
     },
