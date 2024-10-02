@@ -17,7 +17,7 @@ const schema = a.schema({
       languageId: a.id().required(),
       language: a.belongsTo("Language", "languageId"),
       lessons: a.hasMany("Lesson", "courseId"),
-      difficulty: a.enum(["beginner", "intermediate", "advanced"]).required(),
+      difficulty: a.enum(["beginner", "intermediate", "advanced"]),
     })
     .authorization((allow) => [
       allow.publicApiKey().to(["read"]),
@@ -50,11 +50,11 @@ const schema = a.schema({
   User: a
     .model({
       name: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       progress: a.hasMany("Progress", "userId"),
     })
     .authorization((allow) => [
-      allow.publicApiKey().to(["read"]),
+      allow.group('Admin').to(["read"]),
       allow.owner(),
     ]),
   Progress: a

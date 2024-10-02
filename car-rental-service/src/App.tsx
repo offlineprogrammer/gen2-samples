@@ -17,8 +17,8 @@ function App() {
   const [count, setCount] = useState(0)
 
   const getVehicles = async () => {
-    const { data: posts } = await amplifyClient.models.Vehicle.list();
-    return posts;
+    const { data: vehicles } = await amplifyClient.models.Vehicle.list();
+    return vehicles;
   };
 
   return (

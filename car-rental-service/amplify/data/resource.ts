@@ -1,3 +1,5 @@
+// amplify/data/resource.ts
+
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 
 const schema = a.schema({
@@ -20,13 +22,13 @@ const schema = a.schema({
   Customer: a
     .model({
       name: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       phone: a.string(),
       licenseNumber: a.string().required(),
       rentals: a.hasMany("Rental", "customerId"),
     })
     .authorization((allow) => [
-      allow.publicApiKey().to(["read"]),
+      allow.group('Admin').to(["read"]),
       allow.owner(),
     ]),
   Location: a

@@ -15,13 +15,13 @@ const schema = a.schema({
   Patient: a
     .model({
       name: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       dateOfBirth: a.date().required(),
       medicalHistory: a.string(),
       appointments: a.hasMany("Appointment", "patientId"),
     })
     .authorization((allow) => [
-      allow.publicApiKey().to(["read"]),
+      allow.group('Billing').to(["read"]),
       allow.owner(),
     ]),
   Appointment: a

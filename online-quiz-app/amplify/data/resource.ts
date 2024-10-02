@@ -42,7 +42,7 @@ const schema = a.schema({
   User: a
     .model({
       username: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       quizAttempts: a.hasMany("QuizAttempt", "userId"),
     })
     .authorization((allow) => [allow.owner()]),

@@ -42,10 +42,13 @@ const schema = a.schema({
   .authorization((allow) => [allow.owner()]),
   User: a.model({
     name: a.string().required(),
-    email: a.string().required(),
+    email: a.email().required(),
     orders: a.hasMany('Order', 'userId')
   })
-  .authorization((allow) => [allow.owner()]),
+  .authorization((allow) => [
+    allow.group('Admin').to(["read"]),
+    allow.owner(),
+  ]),
  
 });
 

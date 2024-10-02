@@ -44,11 +44,11 @@ const schema = a.schema({
   User: a
     .model({
       username: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       subscriptions: a.hasMany("Subscription", "userId"),
     })
     .authorization((allow) => [
-      allow.publicApiKey().to(["read"]),
+      allow.group('Admin').to(["read"]),
       allow.owner(),
     ]),
 });

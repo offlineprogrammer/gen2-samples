@@ -4,11 +4,10 @@ const schema = a.schema({
   User: a
     .model({
       username: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       games: a.hasMany("GamePlayer", "playerId"),
     })
     .authorization((allow) => [
-      allow.publicApiKey().to(["read"]),
       allow.owner(),
     ]),
   Game: a

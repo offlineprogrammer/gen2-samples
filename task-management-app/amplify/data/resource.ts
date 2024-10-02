@@ -4,10 +4,13 @@ const schema = a.schema({
 
   User: a.model({
     name: a.string().required(),
-    email: a.string().required(),
+    email: a.email().required(),
     tasks: a.hasMany('Task', 'userId'),
     projects: a.hasMany('ProjectUser', 'userId')
-  })  .authorization((allow) => [allow.owner()]),
+  })      .authorization((allow) => [
+    allow.group('Admin').to(["read"]),
+    allow.owner(),
+  ]),
 
   Task: a.model({
     title: a.string().required(),

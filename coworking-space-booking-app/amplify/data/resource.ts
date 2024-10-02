@@ -4,11 +4,11 @@ const schema = a.schema({
   User: a
     .model({
       name: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       bookings: a.hasMany("Booking", "userId"),
     })
     .authorization((allow) => [
-      allow.publicApiKey().to(["read"]),
+      allow.group('Admin').to(["read"]),
       allow.owner(),
     ]),
   Space: a

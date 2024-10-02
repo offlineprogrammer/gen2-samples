@@ -42,12 +42,12 @@ const schema = a.schema({
   User: a
     .model({
       name: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       phone: a.string(),
       reservations: a.hasMany("Reservation", "userId"),
     })
     .authorization((allow) => [
-      allow.publicApiKey().to(["read"]),
+      allow.group('Admin').to(["read"]),
       allow.owner(),
     ]),
   Reservation: a

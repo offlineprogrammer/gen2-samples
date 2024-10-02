@@ -4,13 +4,13 @@ const schema = a.schema({
   User: a
     .model({
       name: a.string().required(),
-      email: a.string().required(),
+      email: a.email().required(),
       projects: a.hasMany("ProjectUsser", "userId"),
       tasks: a.hasMany("Task", "userId"),
       comments: a.hasMany("Comment", "userId"),
     })
     .authorization((allow) => [
-      allow.publicApiKey().to(["read"]),
+      allow.authenticated().to(["read"]),
       allow.owner(),
     ]),
 
