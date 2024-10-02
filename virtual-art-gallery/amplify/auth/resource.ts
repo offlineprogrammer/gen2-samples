@@ -6,12 +6,11 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for Virtual Art Gallery",
       verificationEmailBody: (createCode) =>
-        `Welcome to Virtual Art Gallery! Your verification code is: ${createCode()}`,
+        "Welcome to Virtual Art Gallery! Your verification code is: " + createCode(),
     },
     phone: {
       verificationMessage: (createCode) =>
-        "Welcome to Virtual Art Gallery! Your verification code is: " +
-        createCode(),
+       "Welcome to Virtual Art Gallery! Your verification code is: " + createCode(),
     },
     externalProviders: {
       google: {

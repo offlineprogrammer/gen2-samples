@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for SmartHome Hub",
       verificationEmailBody: (createCode) =>
-        `Welcome to SmartHome Hub! Your verification code is: ${createCode()}`,
+        "Welcome to SmartHome Hub! Your verification code is: " + createCode(),
     },
 
     phone: true,

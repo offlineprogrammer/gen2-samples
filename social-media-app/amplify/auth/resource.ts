@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for SocialConnect",
       verificationEmailBody: (createCode) =>
-        `Welcome to SocialConnect! Your verification code is: ${createCode()}`,
+        "Welcome to SocialConnect! Your verification code is: " + createCode(),
     },
 
     phone: true,

@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for ProjectPro",
       verificationEmailBody: (createCode) =>
-        `Welcome to ProjectPro! Your verification code is: ${createCode()}`,
+        "Welcome to ProjectPro! Your verification code is: " + createCode(),
     },
   },
   userAttributes: {

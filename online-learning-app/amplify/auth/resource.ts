@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for EduLearn",
       verificationEmailBody: (createCode) =>
-        `Welcome to EduLearn! Your verification code is: ${createCode()}`,
+        "Welcome to EduLearn! Your verification code is: " + createCode(),
     },
     phone: true,
   },

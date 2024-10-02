@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for TravelPlanner",
       verificationEmailBody: (createCode) =>
-        `Welcome to TravelPlanner! Your verification code is: ${createCode()}`,
+        "Welcome to TravelPlanner! Your verification code is: " + createCode(),
     },
     phone: true,
     externalProviders: {

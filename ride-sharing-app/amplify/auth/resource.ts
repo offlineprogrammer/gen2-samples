@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for RideShare",
       verificationEmailBody: (createCode) =>
-        `Welcome to RideShare! Your verification code is: ${createCode()}`,
+        "Welcome to RideShare! Your verification code is: " + createCode(),
     },
     phone: true,
     externalProviders: {

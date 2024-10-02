@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for RentalPro",
       verificationEmailBody: (createCode) =>
-        `Welcome to RentalPro! Your verification code is: ${createCode()}`,
+        "Welcome to RentalPro! Your verification code is: " + createCode(),
     },
   },
   userAttributes: {

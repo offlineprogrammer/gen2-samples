@@ -6,12 +6,11 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for FreelanceConnect",
       verificationEmailBody: (createCode) =>
-        `Welcome to FreelanceConnect! Your verification code is: ${createCode()}`,
+        "Welcome to FreelanceConnect! Your verification code is: " + createCode(),
     },
     phone: {
       verificationMessage: (createCode) =>
-        "Welcome to FreelanceConnect! Your verification code is: " +
-        createCode(),
+        "Welcome to FreelanceConnect! Your verification code is: " + createCode(),
     },
     externalProviders: {
       google: {

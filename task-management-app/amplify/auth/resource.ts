@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for TaskMaster",
       verificationEmailBody: (createCode) =>
-        `Welcome to TaskMaster! Your verification code is: ${createCode()}`,
+        "Welcome to TaskMaster! Your verification code is: " + createCode(),
     },
     phone: true,
   },

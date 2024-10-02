@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for MusicStream",
       verificationEmailBody: (createCode) =>
-        `Welcome to MusicStream! Your verification code is: ${createCode()}`,
+        "Welcome to MusicStream! Your verification code is: " + createCode(),
     },
     phone: true,
     externalProviders: {

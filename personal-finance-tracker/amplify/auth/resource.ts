@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for FinTrack",
       verificationEmailBody: (createCode) =>
-        `Welcome to FinTrack! Your verification code is: ${createCode()}`,
+        "Welcome to FinTrack! Your verification code is: " + createCode(),
     },
     externalProviders: {
       google: {

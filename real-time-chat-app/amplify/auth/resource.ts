@@ -6,7 +6,7 @@ export const auth = defineAuth({
       verificationEmailStyle: "CODE",
       verificationEmailSubject: "Verify your email for ChatApp",
       verificationEmailBody: (createCode) =>
-        `Welcome to ChatApp! Your verification code is: ${createCode()}`,
+        "Welcome to ChatApp! Your verification code is: " + createCode(),
     },
     phone: true,
     externalProviders: {
