@@ -9,9 +9,7 @@ import outputs from "../amplify_outputs.json";
 
 Amplify.configure(outputs);
 
-const amplifyClient = generateClient<Schema>({
-  authMode: "userPool",
-});
+const amplifyClient = generateClient<Schema>();
 
 function App() {
   const [count, setCount] = useState(0)
