@@ -2,4 +2,4 @@ Develop a data model and API interactions for an inventory management system usi
 Include models for products, categories, suppliers, orders, and order items. 
 Show how to get the list of products.
 Share the backend code for authentication using Amplify Gen 2 to allow the user's to sign up using their email address 
-Configure the foollowing groups for the system: Admins, suppliers & customers 
+Configure the following groups for the system: Admins, suppliers & customers 
