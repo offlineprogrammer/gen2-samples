@@ -14,10 +14,10 @@ const amplifyClient = generateClient<Schema>();
 function App() {
   const [count, setCount] = useState(0)
 
-  const getDoctors = async () => {
-    const { data: doctors } = await amplifyClient.models.Doctor.list();
-    return doctors;
-  };
+const getDoctors = async () => {
+  const { data: doctors } = await amplifyClient.models.Doctor.list();
+  return doctors;
+};
 
   return (
     <>

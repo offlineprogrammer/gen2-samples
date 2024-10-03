@@ -1,4 +1,4 @@
 Design a backend schema for a healthcare appointment scheduling system using Amplify Gen 2. 
 Include models for doctors, patients, appointments, availability slots, and medical records. 
 Demonstrate how to get the list of doctors
-Share the backend code for authentication using Amplify Gen 2 to allow the user's to sign up using their email address and provide a provide a preferred username
+Share the backend code for authentication using Amplify Gen 2 to allow the user's to sign up using their email address and a provide a preferred username
