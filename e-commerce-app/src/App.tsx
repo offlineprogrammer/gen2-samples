@@ -15,8 +15,8 @@ function App() {
   const [count, setCount] = useState(0)
 
   const getProducts = async () => {
-    const { data: posts } = await amplifyClient.models.Product.list();
-    return posts;
+    const { data: products } = await amplifyClient.models.Product.list();
+    return products;
   };
 
   return (
