@@ -14,10 +14,10 @@ const amplifyClient = generateClient<Schema>();
 function App() {
   const [count, setCount] = useState(0)
 
-  const getProperties = async () => {
-    const { data: properties } = await amplifyClient.models.Property.list();
-    return properties;
-  };
+const getProperties = async () => {
+  const { data: properties } = await amplifyClient.models.Property.list();
+  return properties;
+};
 
   return (
     <>
