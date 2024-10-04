@@ -14,16 +14,16 @@ const amplifyClient = generateClient<Schema>();
 function App() {
   const [count, setCount] = useState(0)
 
-  const getDrivers = async () => {
-    const { data: drivers } = await amplifyClient.models.User.list({
-      filter: {
-        role: {
-          eq: 'driver'
-        }
+const getDrivers = async () => {
+  const { data: drivers } = await amplifyClient.models.User.list({
+    filter: {
+      role: {
+        eq: 'driver'
       }
-    });
-    return drivers;
-  };
+    }
+  });
+  return drivers;
+};
 
   return (
     <>
