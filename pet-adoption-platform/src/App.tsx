@@ -14,10 +14,10 @@ const amplifyClient = generateClient<Schema>();
 function App() {
   const [count, setCount] = useState(0)
 
-  const getPets = async () => {
-    const { data: posts } = await amplifyClient.models.Pet.list();
-    return posts;
-  };
+const getPets = async () => {
+  const { data: pets } = await amplifyClient.models.Pet.list();
+  return pets;
+};
 
   return (
     <>
