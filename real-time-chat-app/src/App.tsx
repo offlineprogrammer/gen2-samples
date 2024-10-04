@@ -14,10 +14,10 @@ const amplifyClient = generateClient<Schema>();
 function App() {
   const [count, setCount] = useState(0)
 
-  const getConversations = async () => {
-    const { data: posts } = await amplifyClient.models.Conversation.list();
-    return posts;
-  };
+const getConversations = async () => {
+  const { data: conversations } = await amplifyClient.models.Conversation.list();
+  return conversations;
+};
 
   return (
     <>
