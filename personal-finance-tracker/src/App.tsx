@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 import { Amplify } from "aws-amplify";
 import { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
@@ -12,11 +12,11 @@ Amplify.configure(outputs);
 const amplifyClient = generateClient<Schema>();
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   const getAccounts = async () => {
-    const { data: posts } = await amplifyClient.models.Account.list();
-    return posts;
+    const { data: accounts } = await amplifyClient.models.Account.list();
+    return accounts;
   };
 
   return (
@@ -42,7 +42,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
