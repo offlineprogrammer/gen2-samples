@@ -14,10 +14,10 @@ const amplifyClient = generateClient<Schema>();
 function App() {
   const [count, setCount] = useState(0)
 
-  const getRestaurants = async () => {
-    const { data: restaurants } = await amplifyClient.models.Restaurant.list();
-    return restaurants;
-  };
+const getRestaurants = async () => {
+  const { data: restaurants } = await amplifyClient.models.Restaurant.list();
+  return restaurants;
+};
 
   return (
     <>
