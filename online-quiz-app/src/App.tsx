@@ -14,10 +14,10 @@ const amplifyClient = generateClient<Schema>();
 function App() {
   const [count, setCount] = useState(0)
 
-  const getQuizzes = async () => {
-    const { data: posts } = await amplifyClient.models.Quiz.list();
-    return posts;
-  };
+const getQuizzes = async () => {
+  const { data: quizzes } = await amplifyClient.models.Quiz.list();
+  return quizzes;
+};
 
   return (
     <>
