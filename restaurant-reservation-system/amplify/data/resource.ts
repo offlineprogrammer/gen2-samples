@@ -9,6 +9,8 @@ const schema = a.schema({
 			openingHours: a.string(),
 			tables: a.hasMany("Table", "resturantId"),
 			menu: a.hasMany("MenuItem", "resturantId"),
+			reservations: a.hasMany("Reservation", "restaurantId"),
+			reviews: a.hasMany("Review", "restaurantId"),
 		})
 		.authorization((allow) => [
 			allow.authenticated().to(["read"]),
@@ -21,6 +23,7 @@ const schema = a.schema({
 			isAvailable: a.boolean().required(),
 			resturantId: a.id().required(),
 			restaurant: a.belongsTo("Restaurant", "resturantId"),
+			reservation: a.hasMany("Reservation", "tableId"),
 		})
 		.authorization((allow) => [
 			allow.authenticated().to(["read"]),
@@ -45,6 +48,7 @@ const schema = a.schema({
 			email: a.email().required(),
 			phone: a.string(),
 			reservations: a.hasMany("Reservation", "userId"),
+			reviews: a.hasMany("Review", "userId"),
 		})
 		.authorization((allow) => [
 			allow.group("Admin").to(["read"]),

@@ -14,7 +14,7 @@ const schema = a.schema({
 			status: a.enum(["waiting", "in_progress", "finished"]),
 			players: a.hasMany("GamePlayer", "gameId"),
 			currentTurnId: a.id(),
-			currentTurn: a.belongsTo("User", "c"),
+			currentTurn: a.belongsTo("User", "currentTurnId"),
 			winnerId: a.id(),
 			winner: a.belongsTo("User", "winnerId"),
 		})

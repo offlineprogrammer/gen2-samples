@@ -29,8 +29,8 @@ const schema = a.schema({
 			user: a.belongsTo("User", "userId"),
 			spaceId: a.id().required(),
 			space: a.belongsTo("Space", "spaceId"),
-			startTime: a.date().required(),
-			endTime: a.date().required(),
+			startTime: a.datetime().required(),
+			endTime: a.datetime().required(),
 			status: a.enum(["pending", "confirmed", "cancelled"]),
 		})
 		.authorization((allow) => [

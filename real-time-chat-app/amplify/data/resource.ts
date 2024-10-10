@@ -6,6 +6,7 @@ const schema = a.schema({
 			username: a.string().required(),
 			status: a.enum(["online", "offline", "away"]),
 			conversations: a.hasMany("ConversationUser", "userId"),
+			messages: a.hasMany("Message", "senderId"),
 		})
 		.authorization((allow) => [allow.owner()]),
 

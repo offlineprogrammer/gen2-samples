@@ -27,6 +27,7 @@ const schema = a.schema({
 			name: a.string().required(),
 			duration: a.integer().required(),
 			price: a.float().required(),
+			appointments: a.hasMany("Appointment", "serviceId"),
 		})
 		.authorization((allow) => [
 			allow.authenticated().to(["read"]),

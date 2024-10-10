@@ -6,6 +6,7 @@ const schema = a.schema({
 			username: a.string().required(),
 			email: a.email().required(),
 			socialAccounts: a.hasMany("SocialAccount", "userId"),
+			campaigns: a.hasMany("Campaign", "userId"),
 		})
 		.authorization((allow) => [allow.owner()]),
 	SocialAccount: a

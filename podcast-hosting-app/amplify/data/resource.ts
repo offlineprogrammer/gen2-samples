@@ -7,7 +7,7 @@ const schema = a.schema({
 			description: a.string(),
 			author: a.string().required(),
 			episodes: a.hasMany("Episode", "podcastId"),
-			subscriptions: a.hasMany("Subscription", "subscriptionId"),
+			subscriptions: a.hasMany("Subscription", "podcastId"),
 		})
 		.authorization((allow) => [
 			allow.authenticated().to(["read"]),

@@ -9,6 +9,7 @@ const schema = a.schema({
       inventory: a.integer().required(),
       categoryId: a.id(),
       category: a.belongsTo("Category", "categoryId"),
+      orderItems: a.hasMany("OrderItem", "productId"),
     })
     .authorization((allow) => [
       allow.authenticated().to(["read"]),

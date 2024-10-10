@@ -5,7 +5,6 @@ const schema = a.schema({
 		.model({
 			name: a.string().required(),
 			email: a.email().required(),
-			tasks: a.hasMany("Task", "userId"),
 			eventsOrganized: a.hasMany("Event", "organizerId"),
 			eventsAttending: a.hasMany("EventAttendee", "userId"),
 		})

@@ -47,6 +47,7 @@ const schema = a.schema({
 			status: a.enum(["pending", "accepted", "rejected"]),
 			projectId: a.id().required(),
 			project: a.belongsTo("Project", "projectId"),
+			bidfreelancers: a.hasMany("BidFreelancer", "bidId"),
 		})
 		.authorization((allow) => [
 			allow.authenticated().to(["read"]),

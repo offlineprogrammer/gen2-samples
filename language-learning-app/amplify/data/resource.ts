@@ -17,6 +17,7 @@ const schema = a.schema({
 			languageId: a.id().required(),
 			language: a.belongsTo("Language", "languageId"),
 			lessons: a.hasMany("Lesson", "courseId"),
+			progresses: a.hasMany("Progress", "courseId"),
 			difficulty: a.enum(["beginner", "intermediate", "advanced"]),
 		})
 		.authorization((allow) => [
