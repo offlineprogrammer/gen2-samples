@@ -7,6 +7,7 @@ const schema = a.schema({
 			specialization: a.string().required(),
 			availability: a.hasMany("Availability", "doctorId"),
 			appointments: a.hasMany("Appointment", "doctorId"),
+			medicalRecords: a.hasMany("MedicalRecord", "doctorId"),
 		})
 		.authorization((allow) => [
 			allow.authenticated().to(["read"]),
@@ -19,6 +20,7 @@ const schema = a.schema({
 			dateOfBirth: a.date().required(),
 			medicalHistory: a.string(),
 			appointments: a.hasMany("Appointment", "patientId"),
+			medicalRecords: a.hasMany("MedicalRecord", "patientId"),
 		})
 		.authorization((allow) => [
 			allow.group("Billing").to(["read"]),

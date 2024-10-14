@@ -37,7 +37,7 @@ const schema = a.schema({
 	Application: a
 		.model({
 			status: a.enum(["pending", "reviewed", "accepted", "rejected"]),
-			jobSeeker: a.belongsTo("applicationJobSeeker", "applicationId"),
+			jobSeeker: a.hasMany("ApplicationJobSeeker", "applicationId"),
 			jobListingId: a.id().required(),
 			jobListing: a.belongsTo("JobListing", "jobListingId"),
 		})
